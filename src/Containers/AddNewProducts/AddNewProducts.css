@@ -1,0 +1,38 @@
+.inputs input {
+    width: 60%;
+    height: 30px;
+    margin-left: 250px;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.inputs input:focus {
+    background: #242b2e;
+    color: white;
+    transition: all 0.2s;
+}
+.inputs h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: FreeMono;
+}
+.btns button {
+    width: 200px;
+    height: 25px;
+    margin-left: 300px;
+    margin-top: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btns button:hover {
+    background: #242b2e;
+    color: white;
+    transition: all 0.4s;
+}
