@@ -36,19 +36,18 @@ export const postProducts = (product) => {
     return async dispatch => {
         try{
             dispatch(postProductsSuccess(product));
-            await axiosAPI.post('/products/.json',product);
+            await axiosAPI.post('/products/.json', product);
         } catch (error) {
             dispatch(postProductsError(error))
         }
     }
 };
 
-export const putProducts = (productInfo,products,name) => {
+export const putProducts = (productId, productInfo) => {
   return async dispatch => {
       try {
-          dispatch(putProductsSuccess(productInfo,products[name]));
-          await axiosAPI.put(`/products/${products[name][0]}.json`,productInfo);
-          console.log(products[name][0])
+          await axiosAPI.put(`/products/${productId}.json`, productInfo);
+          dispatch(fetchProducts())
       } catch (error) {
           dispatch(putProductsError(error))
       }
